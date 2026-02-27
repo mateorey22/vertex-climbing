@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion | VERTEX CLIMBING</title>
+    <meta name="description" content="Connectez-vous à votre compte VERTEX CLIMBING">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧗</text></svg>">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">🏔️</div>
+                VERTEX<span class="logo-accent">CLIMBING</span>
+            </a>
+
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li><a href="produits.html" class="nav-link">Produits</a></li>
+                    <li><a href="index.html#philosophy" class="nav-link">Philosophie</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="panier.html" class="icon-btn" title="Panier">
+                    🛒
+                    <span class="cart-count">0</span>
+                </a>
+                <div class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Login Section -->
+    <section class="login-hero">
+        <div class="login-container">
+            <div class="login-card">
+                <div class="login-header">
+                    <a href="index.html" class="logo" style="justify-content: center; margin-bottom: 1.5rem;">
+                        <div class="logo-icon">🏔️</div>
+                        VERTEX<span class="logo-accent">CLIMBING</span>
+                    </a>
+                    <h1>Bienvenue</h1>
+                    <p>Connectez-vous pour accéder à votre compte</p>
+                </div>
+
+                <form class="login-form" id="login-form" onsubmit="handleLogin(event)">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="votre@email.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Mot de passe</label>
+                        <input type="password" id="password" name="password" placeholder="••••••••" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="remember-me">
+                            <input type="checkbox" id="remember" name="remember">
+                            <label for="remember" style="color: var(--light-gray); font-size: 0.9rem;">Se souvenir de moi</label>
+                        </div>
+                        <a href="#" class="forgot-password">Mot de passe oublié ?</a>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary login-btn">
+                        Se connecter
+                        <span>→</span>
+                    </button>
+                </form>
+
+                <div class="login-divider">ou</div>
+
+                <div class="social-login">
+                    <button class="social-btn" onclick="socialLogin('google')">
+                        <span>🔵</span>
+                        Continuer avec Google
+                    </button>
+                    <button class="social-btn" onclick="socialLogin('apple')">
+                        <span>🍎</span>
+                        Continuer avec Apple
+                    </button>
+                    <button class="social-btn" onclick="socialLogin('facebook')">
+                        <span>📘</span>
+                        Continuer avec Facebook
+                    </button>
+                </div>
+
+                <div class="login-footer">
+                    <p>Pas encore de compte ? <a href="#">Créer un compte</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/main.js"></script>
+    <script>
+        function handleLogin(event) {
+            event.preventDefault();
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            if (login(email, password)) {
+                // Login successful - handled by main.js
+            }
+        }
+
+        function socialLogin(provider) {
+            showNotification('Connexion avec ' + provider + ' en cours...');
+        }
+    </script>
+</body>
+</html>
