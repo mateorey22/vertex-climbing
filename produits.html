@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produits | VERTEX CLIMBING</title>
+    <meta name="description" content="Découvrez notre gamme complète d'équipement d'escalade professionnel.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧗</text></svg>">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">🏔️</div>
+                VERTEX<span class="logo-accent">CLIMBING</span>
+            </a>
+
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li><a href="produits.html" class="nav-link">Produits</a></li>
+                    <li><a href="index.html#philosophy" class="nav-link">Philosophie</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="login.html" class="icon-btn" title="Connexion">👤</a>
+                <a href="panier.html" class="icon-btn" title="Panier">
+                    🛒
+                    <span class="cart-count">0</span>
+                </a>
+                <div class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="section section-dark" style="padding-top: 120px; padding-bottom: 2rem;">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">~ Catalogue Complet ~</span>
+                <h1 class="section-title">Nos Produits</h1>
+                <p class="section-desc">
+                    Équipement de qualité professionnelle pour tous types d'escalade
+                </p>
+            </div>
+
+            <!-- Category Filter -->
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
+                <button class="btn btn-primary" onclick="filterProducts('all')">Tous</button>
+                <button class="btn btn-secondary" onclick="filterProducts('Harnais')">Harnais</button>
+                <button class="btn btn-secondary" onclick="filterProducts('Chaussons')">Chaussons</button>
+                <button class="btn btn-secondary" onclick="filterProducts('Cordes')">Cordes</button>
+                <button class="btn btn-secondary" onclick="filterProducts('Mousquetons')">Mousquetons</button>
+                <button class="btn btn-secondary" onclick="filterProducts('Accessoires')">Accessoires</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="section section-dark" style="padding-top: 2rem;">
+        <div class="container">
+            <div class="products-grid" id="products-container">
+                <!-- Products will be rendered by JavaScript -->
+            </div>
+
+            <!-- Pagination -->
+            <div style="display: flex; justify-content: center; gap: 0.5rem; margin-top: 4rem;">
+                <button class="btn btn-secondary" style="padding: 0.75rem 1.25rem;">←</button>
+                <button class="btn btn-primary" style="padding: 0.75rem 1.25rem;">1</button>
+                <button class="btn btn-secondary" style="padding: 0.75rem 1.25rem;">2</button>
+                <button class="btn btn-secondary" style="padding: 0.75rem 1.25rem;">3</button>
+                <button class="btn btn-secondary" style="padding: 0.75rem 1.25rem;">→</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Banner -->
+    <section style="padding: 4rem 2rem; background: var(--primary-black);">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; text-align: center;">
+                <div>
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">🚚</div>
+                    <h4 style="font-family: var(--font-heading); margin-bottom: 0.5rem;">Livraison Gratuite</h4>
+                    <p style="color: var(--light-gray); font-size: 0.9rem;">À partir de 150€ d'achat</p>
+                </div>
+                <div>
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">🛡️</div>
+                    <h4 style="font-family: var(--font-heading); margin-bottom: 0.5rem;">Garantie 5 ans</h4>
+                    <p style="color: var(--light-gray); font-size: 0.9rem;">Sur tous nos équipements</p>
+                </div>
+                <div>
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">↩️</div>
+                    <h4 style="font-family: var(--font-heading); margin-bottom: 0.5rem;">Retours Faciles</h4>
+                    <p style="color: var(--light-gray); font-size: 0.9rem;">30 jours pour changer d'avis</p>
+                </div>
+                <div>
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">💬</div>
+                    <h4 style="font-family: var(--font-heading); margin-bottom: 0.5rem;">Support Expert</h4>
+                    <p style="color: var(--light-gray); font-size: 0.9rem;">conseil@vertexclimbing.fr</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <div class="footer-logo-icon">🏔️</div>
+                    VERTEX
+                </div>
+                <p class="footer-desc">
+                    Équipement d'escalade professionnel pour les grimpeurs exigeants.
+                </p>
+                <div class="footer-social">
+                    <a href="#" class="social-link">📷</a>
+                    <a href="#" class="social-link">🎬</a>
+                    <a href="#" class="social-link">📘</a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h4>Shop</h4>
+                <ul class="footer-links">
+                    <li><a href="produits.html">Tous les produits</a></li>
+                    <li><a href="produits.html">Harnais</a></li>
+                    <li><a href="produits.html">Chaussons</a></li>
+                    <li><a href="produits.html">Cordes</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Informations</h4>
+                <ul class="footer-links">
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#">Livraison</a></li>
+                    <li><a href="#">Retours</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Légal</h4>
+                <ul class="footer-links">
+                    <li><a href="#">CGV</a></li>
+                    <li><a href="#">Confidentialité</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p class="footer-copyright">© 2026 VERTEX CLIMBING. Tous droits réservés.</p>
+            <div class="footer-payments">
+                <span class="payment-icon">💳</span>
+                <span class="payment-icon">VISA</span>
+                <span class="payment-icon">MC</span>
+                <span class="payment-icon">PayPal</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Filter functionality
+        function filterProducts(category) {
+            const container = document.getElementById('products-container');
+
+            // Update button styles
+            document.querySelectorAll('.btn').forEach(btn => {
+                btn.classList.remove('btn-primary');
+                btn.classList.add('btn-secondary');
+            });
+            event.target.classList.remove('btn-secondary');
+            event.target.classList.add('btn-primary');
+
+            // Filter products
+            let filtered = category === 'all' 
+                ? products 
+                : products.filter(p => p.category === category);
+
+            container.innerHTML = filtered.map(product => `
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="${product.image}" alt="${product.name}" loading="lazy">
+                        ${product.badge ? `<span class="product-badge">${product.badge}</span>` : ''}
+                        <div class="product-actions">
+                            <button class="product-action-btn" onclick="quickView(${product.id})" title="Aperçu">
+                                <span>👁</span>
+                            </button>
+                            <button class="product-action-btn" onclick="addToWishlist(${product.id})" title="Favoris">
+                                <span>♥</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">${product.category}</span>
+                        <h3 class="product-title">${product.name}</h3>
+                        <p class="product-desc">${product.description}</p>
+                        <div class="product-footer">
+                            <span class="product-price">${product.price.toFixed(2)} €</span>
+                            <button class="product-btn" onclick="addToCart(${product.id})">
+                                Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+    </script>
+</body>
+</html>
