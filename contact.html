@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | VERTEX CLIMBING</title>
+    <meta name="description" content="Contactez VERTEX CLIMBING pour toutes vos questions sur l'équipement d'escalade.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧗</text></svg>">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">🏔️</div>
+                VERTEX<span class="logo-accent">CLIMBING</span>
+            </a>
+
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li><a href="produits.html" class="nav-link">Produits</a></li>
+                    <li><a href="index.html#philosophy" class="nav-link">Philosophie</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="login.html" class="icon-btn" title="Connexion">👤</a>
+                <a href="panier.html" class="icon-btn" title="Panier">
+                    🛒
+                    <span class="cart-count">0</span>
+                </a>
+                <div class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contact Hero -->
+    <section class="contact-hero">
+        <div class="container">
+            <span class="section-subtitle">~ Nous Contacter ~</span>
+            <h1 class="section-title" style="margin-top: 1rem;">Une Question ?</h1>
+            <p class="section-desc">Notre équipe d'experts est disponible pour vous conseiller</p>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="contact-container">
+        <div class="contact-grid">
+            <!-- Contact Info -->
+            <div class="contact-info">
+                <div class="contact-card">
+                    <div class="contact-icon">📍</div>
+                    <h3>Notre Adresse</h3>
+                    <p>42 Rue des Grimpeurs<br>38000 Grenoble<br>France</p>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">📧</div>
+                    <h3>Email</h3>
+                    <p>contact@vertexclimbing.fr<br>conseil@vertexclimbing.fr</p>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">📞</div>
+                    <h3>Téléphone</h3>
+                    <p>+33 4 76 00 00 00<br>Lun-Ven: 9h-18h</p>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">💬</div>
+                    <h3>Réseaux Sociaux</h3>
+                    <p>Suivez-nous sur Instagram<br>@vertexclimbing</p>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form-wrapper">
+                <form class="contact-form" onsubmit="submitContactForm(event)">
+                    <h2>Envoyez-nous un message</h2>
+
+                    <div class="form-group">
+                        <label for="name">Nom complet</label>
+                        <input type="text" id="name" name="name" placeholder="Votre nom" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="votre@email.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Sujet</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Sélectionnez un sujet</option>
+                            <option value="commande">Question sur une commande</option>
+                            <option value="produit">Conseil produit</option>
+                            <option value="retour">Retour / Échange</option>
+                            <option value="partenariat">Partenariat</option>
+                            <option value="autre">Autre</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Votre message..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">
+                        Envoyer le message
+                        <span>→</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section style="padding: 4rem 2rem; background: var(--secondary-black);">
+        <div class="container">
+            <div style="background: var(--tertiary-black); border-radius: 24px; height: 400px; display: flex; align-items: center; justify-content: center; border: 1px solid var(--glass-border);">
+                <div style="text-align: center;">
+                    <div style="font-size: 4rem; margin-bottom: 1rem;">🗺️</div>
+                    <h3 style="font-family: var(--font-heading); margin-bottom: 0.5rem;">Grenoble, France</h3>
+                    <p style="color: var(--light-gray);">Au cœur des Alpes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section style="padding: 6rem 2rem; background: var(--primary-black);">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">~ FAQ ~</span>
+                <h2 class="section-title">Questions Fréquentes</h2>
+            </div>
+
+            <div style="display: grid; gap: 1.5rem; max-width: 800px; margin: 0 auto;">
+                <div class="glass-card" style="padding: 1.5rem;">
+                    <h4 style="font-family: var(--font-heading); margin-bottom: 0.5rem;">Quels sont les délais de livraison ?</h4>
+                    <p style="color: var(--light-gray); font-size: 0.95rem;">Nous livrons sous 2-5 jours ouvrés en France métropolitaine. La livraison est gratuite à partir de 150€.</p>
+                </div>
+                <div class="glass-card" style="padding: 1.5rem;">
+                    <h4 style="font-family: var(--font-heading); margin-bottom: 0.5rem;">Quelle est la garantie sur vos produits ?</h4>
+                    <p style="color: var(--light-gray); font-size: 0.95rem;">Tous nos équipements bénéficient d'une garantie de 5 ans contre les défauts de fabrication.</p>
+                </div>
+                <div class="glass-card" style="padding: 1.5rem;">
+                    <h4 style="font-family: var(--font-heading); margin-bottom: 0.5rem;">Puis-je retourner un produit ?</h4>
+                    <p style="color: var(--light-gray); font-size: 0.95rem;">Oui, vous avez 30 jours pour retourner tout produit non utilisé dans son emballage d'origine.</p>
+                </div>
+                <div class="glass-card" style="padding: 1.5rem;">
+                    <h4 style="font-family: var(--font-heading); margin-bottom: 0.5rem;">Comment choisir la taille de mon harnais ?</h4>
+                    <p style="color: var(--light-gray); font-size: 0.95rem;">Contactez notre équipe qui vous guidera selon votre morphologie et votre pratique.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <div class="footer-logo-icon">🏔️</div>
+                    VERTEX
+                </div>
+                <p class="footer-desc">
+                    Équipement d'escalade professionnel pour les grimpeurs exigeants.
+                </p>
+                <div class="footer-social">
+                    <a href="#" class="social-link">📷</a>
+                    <a href="#" class="social-link">🎬</a>
+                    <a href="#" class="social-link">📘</a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h4>Shop</h4>
+                <ul class="footer-links">
+                    <li><a href="produits.html">Tous les produits</a></li>
+                    <li><a href="produits.html">Harnais</a></li>
+                    <li><a href="produits.html">Chaussons</a></li>
+                    <li><a href="produits.html">Cordes</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Informations</h4>
+                <ul class="footer-links">
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#">Livraison</a></li>
+                    <li><a href="#">Retours</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Légal</h4>
+                <ul class="footer-links">
+                    <li><a href="#">CGV</a></li>
+                    <li><a href="#">Confidentialité</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p class="footer-copyright">© 2026 VERTEX CLIMBING. Tous droits réservés.</p>
+            <div class="footer-payments">
+                <span class="payment-icon">💳</span>
+                <span class="payment-icon">VISA</span>
+                <span class="payment-icon">MC</span>
+                <span class="payment-icon">PayPal</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
